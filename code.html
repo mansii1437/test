@@ -1,0 +1,154 @@
+<html>
+<title>test</title>
+<head>
+<script>
+function insert(num){
+document.calk.textview.value=document.calk.textview.value+num
+}
+function equal(){
+ var exp=document.calk.textview.value;
+if(exp){document.calk.textview.value=eval(exp)}}
+function clean(){
+document.calk.textview.value="";}
+function push(){
+document.calk.button1="hvr-push";}
+</script>
+<style>
+*{ margin: 0;
+   padding: 0;
+   }
+   .button1
+   {
+width: 75;
+height: 75;
+font-size: 25;
+margin: 2;
+cursor: pointer;
+border-radius: 5;
+background: #AFEEEE;
+}
+.button
+{
+width: 75;
+height:75;
+font-size: 25;
+margin: 2;
+cursor: pointer;
+border-radius: 5;
+background: #00FFFF;
+}
+.hvr-push 
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.hvr-push {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-push:hover, .hvr-push:focus, .hvr-push:active {
+  -webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.button2
+{
+
+width: 157;
+height:75;
+font-size: 25;
+margin: 2;
+cursor: pointer;
+border-radius: 5;
+background: #00FFFF;
+
+}
+.textview
+{
+width: 317;
+margin: 5;
+font-size: 50;
+padding: 5;
+border-radius: 5;
+}
+
+.main
+{
+border-radius: 5;
+background:linear-gradient(to right,#000080,pink);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translateX(-50%)translateY(-50%);
+.bg{background:linear-gradient(to right,#000080,#800080)};
+</style>
+
+</head>
+<body>
+<div class="bg">
+<div class="main">
+<form name="calk">
+<input class="textview" name="textview">
+</form>
+<table>
+<tr>
+<td><input class="button1"type="button"value="CE"onclick="clean();push()"></td>
+<td><input class="button1 hvr-push"type="button"value="&#9003;"onclick="clean()"></td>
+<td><input class="button1 hvr-push"type="button"value="/" onclick="insert('/')"></td>
+<td><input class="button1 hvr-push"type="button"value="*" onclick="insert('*')"></td>
+                    </tr>
+<tr>
+<td><input class="button hvr-push"type="button"value="7"onclick="insert(7)"></td>
+<td><input class="button hvr-push"type="button"value="8"onclick="insert(8)"></td>
+<td><input class="button hvr-push"type="button"value="9"onclick="insert(9)"></td>
+<td><input class="button1 hvr-push"type="button"value="-"onclick="insert('-')"></td>
+                    </tr>
+					<tr>
+<td onclick="hvr-push"><input class="button"type="button"value="4"onclick="insert(4)"></td>
+<td><input class="button hvr-push"type="button"value="5"onclick="insert(5)"></td>
+<td><input class="button hvr-push"type="button"value="6"onclick="insert(6)"></td>
+<td><input class="button1 hvr-push"type="button"value="+" onclick="insert('+')"></td>
+                    </tr>
+					<tr>
+<td><input class="button hvr-push"type="button"value="1"onclick="insert(1)"></td>
+<td><input class="button hvr-push"type="button"value="2"onclick="insert(2)"></td>
+<td><input class="button hvr-push"type="button"value="3"onclick="insert(3)"></td>
+<td rowspan=5><input class="button1 hvr-push"style="height:157"type="button"value="="onclick="equal()"></td>
+                    </tr>
+					<tr>
+					<td colspan=2><input class="button2 hvr-push"type="button"value="0" onclick="insert(0)"></td>
+<td><input class="button hvr-push"type="button"value=","onclick="insert('.')"></td>
+                    </tr>
+</body>
+
+
+
+
+
+
+
+</html>
